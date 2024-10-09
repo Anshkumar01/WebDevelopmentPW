@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      let rm = Math.random();
+      let f, s, t;
+      if (rm < 0.33) {
+        f = "aalu";
+      } else if (rm < 0.66 && rm > 0.33) {
+        f = "land";
+      } else {
+        f = "red";
+      }
+      let rm2 = Math.random();
+      if (rm2 < 0.33) {
+        s = "food";
+      } else if (rm < 0.66 && rm >= 0.33) {
+        s = "garments";
+      } else {
+        s = "ice cream";
+      }
+      let rm3 = Math.random();      
+      if (rm3 < 0.33) {
+        t = "wala";
+      } else if (rm < 0.66 && rm >= 0.33) {
+        t = "corner";
+      } else {
+        t = "place";
+      }
+
+      console.log(`${f} ${s} ${t}`)
+    </script>
+  </body>
+</html>

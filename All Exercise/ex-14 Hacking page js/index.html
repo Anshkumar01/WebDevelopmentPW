@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacking page</title>
+    <style>
+      body {
+        background-color: rgb(9, 89, 9);
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Initialing Hacking...</div>
+
+    <script>
+      const addItem = async (item) => {
+        await rendomDelay();
+        let div = document.createElement("div");
+        div.innerHTML = item;
+        document.body.append(div);
+      };
+
+      const rendomDelay = (resolve, reject) => {
+        return new Promise((resolve, reject) => {
+          timeout = 1 + 4 * Math.random();
+          setTimeout(() => {
+            resolve();
+          }, timeout * 1000);
+        });
+      };
+
+      async function main() {
+
+        let t = setInterval(()=>{
+            let last = document.body.getElementsByTagName("div");
+            last = last[last.length-1]
+            if(last.innerHTML.endsWith("...")){
+                last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length-3)
+                
+            }else{
+                last.innerHTML = last.innerHTML + "."
+            }
+            
+        }, 100)
+
+        let test = [
+          "Initialing Hacking now reading your data",
+          "Reading your Files",
+          "Password files Detected",
+          "Sending all Password and personal files to server",
+          "Clearing up",
+        ];
+        for (const item of test) {
+          await addItem(item);
+        }
+        await rendomDelay()
+        clearInterval(t)
+        
+      }
+      main()
+    </script>
+  </body>
+</html>

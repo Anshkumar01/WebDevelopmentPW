@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --color:rgba(0, 0, 0, 0.539);
+    --seccolor: rgb(6, 5, 5);
+}
+li{
+    display: inline;
+    padding: 50px;
+    color: rgb(255, 255, 255);
+    
+}
+ul{
+    padding: 30px;
+}
+nav{
+    background-color: var(--seccolor);
+    /* background-color: rgb(6, 5, 5); */
+}
+
+
+
+.box{
+    background-color: var(--color);
+    /* background-color: rgba(0, 0, 0, 0.667); */
+    height: 1000px;
+}
+h1{
+    margin: 10px;
+}
+h3{
+    margin: 10px;
+}
+p{
+    margin: 10px;
+}
