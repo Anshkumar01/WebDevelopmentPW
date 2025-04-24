@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.button{
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 1rem;
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+    z-index: 999;
+    transition: 0.5s;
+    font-size: 2rem;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.button:hover {
+    background-color: #2980b9;
+}
+.button:active{
+    transform: translateY(10%) translateX(10%);
+    box-shadow: 0px 0px 0px #fff
+}
+.notification{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #f39c12;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.notification[data-count]:after {
+    content: attr(data-count);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification::before{
+    content: "\f0f3";
+    font-family: FontAwesome;
+    display: block;
+    color: black;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.notification.count::after{
+    opacity: 1;
+    transform: scale(1);
+}
+/* .notification.notify::before{
+    animation: bell 1s ease-out;
+    transform-origin: center top;
+} */
+
+/* @keyframes bell {
+    0%{
+        transform: rotate(40deg);
+    }
+    12.5%{
+        transform: rotate(-35deg);
+    }
+    25%{
+        transform: rotate(30deg);
+    }
+    37.5%{
+        transform: rotate(-25deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    62.5%{
+        transform: rotate(-15deg);
+    }
+    75%{
+        transform: rotate(10deg);
+    }
+    87.5%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate( 0deg);
+    }
+} */
+
+/* Animation for the notification */
+@keyframes vibrate {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-20deg); }
+    50% { transform: rotate(20deg); }
+    75% { transform: rotate(-20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.count {
+    animation: vibrate 0.5s ease-in-out;
+}
