@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #00bbff, #ff00d0);
+    font-family: 'Arial', sans-serif;
+}
+.text{
+    color: black;
+    line-height: 10rem;
+    text-align: center;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    
+}
+span{
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2 4 rbg(0,0,0, 0.2);
+    display: inline-block;
+    transition: transform 0.3s;
+    width: 150px;
+}
+
+span:hover{
+    transform: scale(1.1);
+}
+
+.indicator{
+    background: linear-gradient(to right, #ffff00, #51ff00);
+    height: 11px;
+    border-radius: 4px;
+    width: 11%;
+    position: fixed;
+    top: 0px;
+} 
+
+.hover-effect {
+    transform: scale(1.1);
+}
